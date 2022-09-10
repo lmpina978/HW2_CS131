@@ -1,0 +1,22 @@
+#include "vec.hpp"
+  int main(){
+  int userNumber;
+  Vector numberObj;
+  std::cout << "What number of items would you like to add from the front of the vector?";
+  std::cin >> userNumber;
+  numberObj.setNumber(userNumber);
+  numberObj.pushBack(numberObj.getNumber());
+  std::cout << "What number of items would you like to remove from the front of the vector?";
+  std::cin >> userNumber;
+  numberObj.setNumber(userNumber);
+  numberObj.pushFront(numberObj.getNumber());
+  std::cout << "What size would you like the vector?";
+  std::cin >> userNumber;
+  numberObj.setCapacity(userNumber);
+  numberObj.resize(numberObj.getCapacity());
+  std::cout << "What number of items in the vector would you like to print?";
+  std::cin >> userNumber;
+  numberObj.setNumber(userNumber);
+  numberObj.print(numberObj.getNumber());
+  return 0;
+}
